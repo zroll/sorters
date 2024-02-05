@@ -1,0 +1,30 @@
+import org.junit.Assert;
+import org.junit.Test;
+import io.mindit.ai.Sorters;
+
+public class SortersTest {
+
+    @Test
+    public void testBubbleSort() {
+        int[] arr = {64, 34, 25, 12, 22, 11, 90};
+        Sorters.bubbleSort(arr);
+        int[] expectedArr = {11, 12, 22, 25, 34, 64, 90};
+        Assert.assertArrayEquals(expectedArr, arr);
+    }
+
+    @Test
+    public void testBubbleSortWithEmptyArray() {
+        int[] arr = {};
+        Sorters.bubbleSort(arr);
+        int[] expectedArr = {};
+        Assert.assertArrayEquals(expectedArr, arr);
+    }
+
+    @Test
+    public void testBubbleSortWithOneElement() {
+        int[] arr = {1};
+        Sorters.bubbleSort(arr);
+        int[] expectedArr = {1};
+        Assert.assertArrayEquals(expectedArr, arr);
+    }
+}
